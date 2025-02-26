@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-print("hello world")
-=======
 import requests
 from bs4 import BeautifulSoup
 
@@ -63,5 +60,4 @@ else:
     print(f"Failed to retrieve data. Status code: {response.status_code}")
 
 
-#  TO DO : CLEAN UP THE CODE FOR EXTENSIVE ERROR HANDLING 
->>>>>>> 18b555d (Added my code to the praise branch)
+#  TO DO : CLEAN UP THE CODE FOR EXTENSIVE ERROR HANDLING
