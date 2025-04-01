@@ -3,6 +3,8 @@ import spacy
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from collections import Counter
+import pdfplumber
+from PIL import Image
 
 def extract_skills_from_resume(resume_text): # Function to extract skills from resume text
     nlp = spacy.load("en_core_web_sm") # spacy is an nlp framework in python that helps process and analyze text
@@ -159,6 +161,14 @@ def analyze_resume_file(file_path):
         return skills
     except Exception as e:
         return f"Error processing file: {str(e)}"
+
+def extract_text_from_pdf(pdf_path):
+    with pdfplumber.open(pdf_path) as pdf:
+        text = ''
+        for page in pdf.pages:
+            text += page.extract_text()
+    return text
+
 
 # skills = analyze_resume_file("resume.pdf")
 # print(skills)
