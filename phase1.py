@@ -19,7 +19,7 @@ def get_job_tech_skills(job_title):
         job_code = job_link["href"].split("/")[-1]  # Extract job code
         job_options.append((job_title_text, job_url, job_code))
     
-    selected_job_options = job_options[:10]  # Change to 15 if needed
+    selected_job_options = job_options[:5]  # Change to 15 if needed
     
     print("\nAvailable Job Titles:\n")
     for idx, (title, link, code) in enumerate(selected_job_options, start=1):
